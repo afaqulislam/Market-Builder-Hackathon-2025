@@ -116,7 +116,7 @@ export default function FAQHelpCenter() {
               ))
             ) : (
               <p className="text-gray-500">
-                No results found for "{searchQuery}".
+                No results found for &quot;{searchQuery}&quot;.
               </p>
             )}
           </div>
