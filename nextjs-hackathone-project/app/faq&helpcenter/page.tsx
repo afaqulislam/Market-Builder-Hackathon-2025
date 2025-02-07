@@ -97,7 +97,9 @@ export default function FAQHelpCenter() {
                       {faq.question}
                     </h3>
                     <ChevronDown
-                      className={`w-5 h-5 transition-transform ${expandedIndex === index ? "rotate-180" : ""}`}
+                      className={`w-5 h-5 transition-transform ${
+                        expandedIndex === index ? "rotate-180" : ""
+                      }`}
                     />
                   </div>
                   {expandedIndex === index && (
@@ -126,8 +128,8 @@ export default function FAQHelpCenter() {
             Contact Support
           </h2>
           <p className="text-gray-600 mb-6">
-            Need further help? Fill out the form below, and we’ll get back to
-            you as soon as possible.
+            Need further help? Fill out the form below, and we&rsquo;ll get back
+            to you as soon as possible.
           </p>
           {!submitted ? (
             <form
