@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "How can I reset my password?",
     answer:
-      "To reset your password, go to the login page, click 'Forgot Password,' and follow the instructions sent to your email.",
+      "To reset your password, go to the login page, click &quot;Forgot Password,&quot; and follow the instructions sent to your email.",
   },
   {
     question: "How do I contact support?",
