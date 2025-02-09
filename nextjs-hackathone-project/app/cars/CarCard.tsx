@@ -22,6 +22,7 @@ export type Car = {
   transmission: string;
   seatingCapacity: string;
   pricePerDay: string;
+  originalPrice: string;
   image: any;
 };
 
@@ -122,7 +123,7 @@ export const CarCard: React.FC<CarCardProps> = ({ car }) => {
         />
       </Link>
 
-      <div className="flex justify-between text-gray-600 mb-4">
+      <div className="flex justify-between text-gray-400 mb-4">
         <div className="flex items-center">
           <FaGasPump className="mr-1" />
           <span>{car.fuelCapacity}</span>
@@ -133,13 +134,13 @@ export const CarCard: React.FC<CarCardProps> = ({ car }) => {
         </div>
         <div className="flex items-center">
           <FaUsers className="mr-1" />
-          <span>{car.seatingCapacity} People</span>
+          <span>{car.seatingCapacity}</span>
         </div>
       </div>
 
       <div className="flex items-center justify-between">
-        <p className="text-lg font-bold text-gray-800">
-          ${car.pricePerDay}/day
+        <p className="text-2xl font-bold text-gray-800">
+          {car.pricePerDay}/ <span className="text-lg text-gray-400 ">day</span>
         </p>
         <Link
           href="/rentalForm"
@@ -148,6 +149,9 @@ export const CarCard: React.FC<CarCardProps> = ({ car }) => {
           Rent Now
         </Link>
       </div>
+      <p className="text-lg font-bold line-through text-gray-400 ">
+        {car.originalPrice}
+      </p>
     </div>
   );
 };

@@ -12,15 +12,7 @@ export const RecentCars: React.FC = () => {
     // Fetch recent cars from Sanity
     const fetchCars = async () => {
       const query = `*[_type == "car"] | order(_createdAt desc) [0..7] {
-        _id,
-        name,
-        brand,
-        type,
-        fuelCapacity,
-        transmission,
-        seatingCapacity,
-        pricePerDay,
-        image
+...
       }`;
       const data = await client.fetch(query);
       setCars(data);

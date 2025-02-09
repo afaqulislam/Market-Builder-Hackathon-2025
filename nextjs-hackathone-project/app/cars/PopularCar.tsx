@@ -14,15 +14,7 @@ export const PopularCarPage: React.FC = () => {
     // Fetch cars from Sanity
     const fetchCars = async () => {
       const query = `*[_type == "car"]{
-        _id,
-        name,
-        brand,
-        type,
-        fuelCapacity,
-        transmission,
-        seatingCapacity,
-        pricePerDay,
-        image
+...
       }`;
       const data: Car[] = await client.fetch(query);
       setCars(data);
